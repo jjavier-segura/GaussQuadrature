@@ -1,3 +1,2 @@
 # Gauss-quadrature
-Fast algorithms for classical Gaussian quadratures and variants. 
 This project provides fast algorithms for computing Gauss-Jacobi (Gauss-Legendre as a particular case), Gauss-Laguerre and Gauss-Hermite quadratures together with Gauss-Radau aand Gauss-Lobatto variants. In addition to Matlab algorithms for all the this three classical cases, arbitrary precision Maple algorithms are provided for the symmetric cases (Gauss-Gegenbauer and Hermite). 
