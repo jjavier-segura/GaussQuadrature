@@ -3,6 +3,4 @@ This project provides fast algorithms for computing Gauss-Jacobi (Gauss-Legendre
 
 The algorithms are described in the paper "Fast and accurate computation of classical Gaussian quadratures", by A. Gil, J. Segura & N. M. Temme (submitted to SIAM J. Sci. Comput.)
 
-
-
-![Captura de pantalla 2025-04-28 123855](https://github.com/user-attachments/assets/3b7c5bca-fdca-4de0-b7b2-06275eb7daf4)
+![image](https://github.com/user-attachments/assets/bd4bd13d-e3c0-48fc-9f11-49f7df991eda)
