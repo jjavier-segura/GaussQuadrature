@@ -4,7 +4,7 @@
 % Asymptotic formulas for Gauss-Legendre (n>80)
 % and look-up table for n<=80
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% n: degrre
+% n: degree
 % x: nodes
 % w: weights
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -801,3 +801,4 @@ x=[-x(end:-1:1+ind) x];
 w=[w(end:-1:1+ind) w];
 
 end
+
