@@ -7,8 +7,11 @@ The algorithms are described in the paper _Fast and accurate computation of clas
 ------------------------------------------------------------------------------------------
 ![image](https://github.com/user-attachments/assets/bd4bd13d-e3c0-48fc-9f11-49f7df991eda)
 ------------------------------------------------------------------------------------------
-
+<div align="center">
+  
 # Software overview 
+
+</div>
 
 # MATLAB algorithms
 
