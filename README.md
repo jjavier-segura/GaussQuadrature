@@ -97,7 +97,7 @@ unscaled)
 
 ## 3. Gauss--Hermite quadrature
 
-**Common Inputs:**\
+**Common Inputs:**
 - `n` (degree)
 - `expoc` (cutoff)
 
