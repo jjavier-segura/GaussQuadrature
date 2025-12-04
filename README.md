@@ -30,7 +30,8 @@ Computation of Gauss--Jacobi quadrature (uses `legen`).
                                            `3` asymptotic method (n not too small)
 
 **Outputs:**  
-- `x` (nodes) - `w` (weights) 
+- `x` (nodes)
+- `w` (weights) 
 - `ie` (error flag): `0` computation succesful
                      `1` computation failed
                      `2` some weights are too small and are set to zero
@@ -68,7 +69,10 @@ barycentric weights (uses `GJ`).
 - `e = [c d]`: `c = 1`, include `x = -1` as node (Gauss-Radau or Gauss-Lobatto); `c = 0`: otherwise;
                `d = 1`, include `x = 1` as node (Gauss-Radau or Gauss-Lobatto); `d = 0`: otherwise
 
-**Outputs:** - `x` (nodes) - `w` (weights) - `wb` (barycentric weights)
+**Outputs:** 
+- `x` (nodes)
+- `w` (weights)
+- `wb` (barycentric weights)
 
 ------------------------------------------------------------------------
 
@@ -103,6 +107,7 @@ Computation of Gauss-Laguerre quadrature (uses `bessJY`).
                      `2` some weights underflow and are set to zero
 
 -------------------------------------------------------------------------
+### 2.2. `RL`
 
 ``` matlab
 function [x,w,wb] = rL(n,a,b,expoc)
@@ -127,7 +132,7 @@ Gauss-Radau-Laguerre quadrature and barycentric weights (uses `GL`).
 
 **Common Inputs:**
 - `n` (degree)
-- `expoc` (cutoff)
+- `expoc` (cutoff, only weights such that w/wmax<10^(-expoc) are computed)
 
 ### 3.1. `GHa` and `GHi`
 
@@ -138,8 +143,11 @@ function [xc,wns,w,uv] = GHi(n,expoc)
 
 Asymptotic (`GHa`) and iterative (`GHi`) computation.
 
-**Outputs:** - `xc` (nodes) - `wns` (unscaled weights) - `w` (scaled
-weights) - `uv` (barycentric weights)
+**Outputs:** 
+- `xc` (nodes)
+- `wns` (unscaled weights)
+- `w` (scaled weights)
+- `uv` (barycentric weights)
 
 ------------------------------------------------------------------------
 
@@ -151,7 +159,9 @@ function [xc,wb] = bH(n,expoc)
 
 Direct computation of barycentric weights.
 
-**Outputs:** - `xc` (nodes) - `wb` (barycentric weights)
+**Outputs:** 
+- `xc` (nodes)
+- `wb` (barycentric weights)
 
 ------------------------------------------------------------------------
 
