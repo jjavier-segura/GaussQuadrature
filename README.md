@@ -93,12 +93,16 @@ Computation of Gauss-Laguerre quadrature (uses `bessJY`).
 - `es` (extra scaling): `0` the weights w are the Gauss-Laguerre weights divided by gamma(a+1)
                         `1` standard Gauss-Laguerre weights
 
-**Outputs:** - `x` (nodes) - `w` (weights) - `we` (scaled weights) -
-`indi` (pivotal index) - `ie` (error flag)
+**Outputs:** 
+- `x` (nodes)
+- `w` (weights)
+- `we` (scaled weights)
+- `indi` (pivotal index): index for the pivotal node used in scaling
+- `ie` (error flag): `0` computation succesful
+                     `1` parameters out of range. No outputs provided
+                     `2` some weights underflow and are set to zero
 
-------------------------------------------------------------------------
-
-### 2.2. `rL`
+-------------------------------------------------------------------------
 
 ``` matlab
 function [x,w,wb] = rL(n,a,b,expoc)
@@ -106,11 +110,16 @@ function [x,w,wb] = rL(n,a,b,expoc)
 
 Gauss-Radau-Laguerre quadrature and barycentric weights (uses `GL`).
 
-**Inputs:** - `n` (degree) - `a` (parameter) - `b` (Gauss or Lobatto
-option) - `expoc` (cutoff)
+**Inputs:**
+- `n` (degree)
+- `a` (parameter of the quadrature)
+- `b` (Gauss or Lobatto option): `0`, standard Gauss quadrature; `1`, Lobatto 
+- `expoc` (exponential cutoff. The algorithm computes only those weights w such that, approximately, w/max(w)<10^(-expoc))
 
-**Outputs:** - `x` (nodes) - `w` (weights) - `wb` (barycentric weights,
-unscaled)
+**Outputs:** 
+- `x` (nodes)
+- `w` (weights)
+- `wb` (barycentric weights, unscaled)
 
 ------------------------------------------------------------------------
 
