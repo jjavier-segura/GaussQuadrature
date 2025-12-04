@@ -35,11 +35,11 @@ function [x,w] = legen(n)
 
 Fast computation of Gauss--Legendre quadrature.
 
-**Input:**\
+**Input:**
 - `n` (degree)
 
-**Outputs:**\
-- `x` (nodes)\
+**Outputs:**
+- `x` (nodes)
 - `w` (weights)
 
 ------------------------------------------------------------------------
