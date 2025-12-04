@@ -65,7 +65,7 @@ barycentric weights (uses `GJ`).
 **Inputs:** 
 - `n` (degree)
 - `a`, `b` (parameters of the quadrature)
-- `e = [c d]`: `c = 1`, include `x = -1` as node (Gauss-Radau or Gauss-Lobatto); `c = 0`: otherwise
+- `e = [c d]`: `c = 1`, include `x = -1` as node (Gauss-Radau or Gauss-Lobatto); `c = 0`: otherwise;
                `d = 1`, include `x = 1` as node (Gauss-Radau or Gauss-Lobatto); `d = 0`: otherwise
 
 **Outputs:** - `x` (nodes) - `w` (weights) - `wb` (barycentric weights)
@@ -82,8 +82,16 @@ barycentric weights (uses `GJ`).
 
 Computation of Gauss-Laguerre quadrature (uses `bessJY`).
 
-**Inputs:** - `n` (degree) - `a` (parameter) - `expoc` (exponential
-cutoff) - `es` (extra scaling) - `me` (optional, default `0`)
+**Inputs:** 
+- `n` (degree)
+- `a` (parameter of the quadrature)
+- `expoc` (exponential cutoff. The algorithm computes only those weights w such that, approximately, w/max(w)<10^(-expoc))
+- `me` (optional, default `0`): `0` combined method
+                                `1` iterative method
+                                `2` Golub-Welsh
+                                `3` asymptotic method (n>150)
+- `es` (extra scaling): `0` the weights w are the Gauss-Laguerre weights divided by gamma(a+1)
+                        `1` standard Gauss-Laguerre weights
 
 **Outputs:** - `x` (nodes) - `w` (weights) - `we` (scaled weights) -
 `indi` (pivotal index) - `ie` (error flag)
