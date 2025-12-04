@@ -7,17 +7,21 @@ The algorithms are described in the paper "Fast and accurate computation of clas
 
 # Overview of the software
 
-MATLAB ALGORITHMS
-
 # Gauss-Jacobi quadratures
 
 ```matlab
 function [x,w,ie]=GJ(n,a,b,me)
 ```
-Computation of Gauss--Jacobi quadrature (uses the function \texttt{legen}). 
+Computation of Gauss-Jacobi quadrature (uses the function `legen`). 
 
-\textbf{Inputs:} \texttt{n} (degree), \texttt{a}, \texttt{b} (parameters of the quadrature), and \texttt{me}, an optional input specifying the mode of computation (default $0$, which corresponds to the combined method).
+```matlab
+function [x,w]=legen(n)
+```
+Fast computation of Gauss-Legendre quadrature.
 
-\textbf{Outputs:}
-\texttt{x} (nodes), \texttt{w} (weights) and \texttt{ie},
-error flag. 
+```matlab
+function [x,w,wb]=rlJ(n,a,b,e)
+```
+Gauss-Radau-Jacobi and Gauss-Lobatto-Jacobi quadratures and barycentric weights (uses the function `GJ`). 
+
+
