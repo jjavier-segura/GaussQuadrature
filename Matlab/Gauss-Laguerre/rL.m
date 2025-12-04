@@ -1,4 +1,4 @@
-function [x,w,wb]=rL(n,a,b,expoc)
+function [x,w,wb]=rL(n,a,b,expoc,es)
 % Gauss-Laguerre and Lobatto-Laguerre nodes and weights
 % Input: 
 %        n: degree
@@ -49,4 +49,5 @@ if(es==1)
    w=gamma(ap+1)*w;
 end    
 end
+
 
