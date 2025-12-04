@@ -21,12 +21,14 @@ function [x,w,ie] = GJ(n,a,b,me)
 
 Computation of Gauss--Jacobi quadrature (uses `legen`).
 
-**Inputs:** - `n` (degree) - `a`, `b` (parameters of the quadrature) -
-`me` (optional, default `0`, combined method)
+**Inputs:** - `n` (degree) - `a`, `b` (parameters of the quadrature) 
+-`me` (mode of computation, default `0`, combined method)
 
-**Outputs:** - `x` (nodes) - `w` (weights) - `ie` (error flag)
-
-------------------------------------------------------------------------
+**Outputs:** - `x` (nodes) - `w` (weights) 
+            - `ie` (error flag): `0` computation succesful
+                                 `1` computation failed
+                                 `2` some weights are too small and are set to zero
+-----------------------------------------------------------------------------------
 
 ### 1.2. `legen`
 
