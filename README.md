@@ -21,8 +21,13 @@ function [x,w,ie] = GJ(n,a,b,me)
 
 Computation of Gauss--Jacobi quadrature (uses `legen`).
 
-**Inputs:** - `n` (degree) - `a`, `b` (parameters of the quadrature) 
--`me` (mode of computation, default `0`, combined method)
+**Inputs:** 
+- `n` (degree)
+- `a`, `b` (parameters of the quadrature) 
+- `me` (mode of computation, default `0`): `0` combined method
+                                           `1` iterative method
+                                           `2` Golub-Welsh
+                                           `3` asymptotic method (n not too small)
 
 **Outputs:**  
 - `x` (nodes) - `w` (weights) 
@@ -57,9 +62,11 @@ function [x,w,wb] = rlJ(n,a,b,e)
 Gauss--Radau--Jacobi and Gauss--Lobatto--Jacobi quadratures and
 barycentric weights (uses `GJ`).
 
-**Inputs:** - `n` (degree) - `a`, `b` (parameters) - `e = [c d]`: -
-`c = 1`: include `x = -1` - `c = 0`: otherwise - `d = 1`: include
-`x = 1` - `d = 0`: otherwise
+**Inputs:** 
+- `n` (degree)
+- `a`, `b` (parameters of the quadrature)
+- `e = [c d]`: -`c = 1`: include `x = -1` as node (Gauss-Radau or Gauss-Lobatto), `c = 0`: otherwise
+-              -`d = 1`: include `x = 1` as node (Gauss-Radau or Gauss-Lobatto), `d = 0`: otherwise
 
 **Outputs:** - `x` (nodes) - `w` (weights) - `wb` (barycentric weights)
 
