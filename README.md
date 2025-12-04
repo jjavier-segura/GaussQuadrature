@@ -8,63 +8,6 @@ The algorithms are described in the paper "Fast and accurate computation of clas
 
 # Overview of the software
 
-# Matlab functions
-
-# Gauss-Jacobi quadratures
-
-```matlab
-function [x,w,ie]=GJ(n,a,b,me)
-```
-## Description
-Computation of Gauss-Jacobi quadrature (uses the function `legen`). 
-
-```matlab
-function [x,w]=legen(n)
-```
-## Description
-Fast computation of Gauss-Legendre quadrature.
-
-```matlab
-function [x,w,wb]=rlJ(n,a,b,e)
-```
-## Description
-Gauss-Radau-Jacobi and Gauss-Lobatto-Jacobi quadratures and barycentric weights (uses the function `GJ`). 
-
-# Gauss-Laguerre quadratures
-
-```matlab
-[x,w,we,indi,ie]=GL(n,a,expoc,es,me)
-```
-## Description
-Computation of Gauss-Laguerre quadrature (uses the function `bessJY`).
-
-```matlab
-function [x,w,wb]=rL(n,a,b,expoc)
-```
-## Description
-Computation of Gauss-Radau-Laguerre quadrature and barycentric weights (uses the function `GL`).
-
-# Gauss-Hermite quadrature
-
-```matlab
-function [xc,wns,w,uv]=GHa(n,expoc)
-```
-## Description
-Asymptotic computation of Gauss-Hermite quadrature.
-
-```matlab
-function [xc,wns,w,uv]=GHi(n,expoc)
-```
-## Description
-Iterative computation of Gauss-Hermite quadrature.
-
-```matlab
-function [xc,wb]=bH(n,expoc)
-```
-## Description
-Computation of barycentric weights. 
-This algorithm computes barycentric weights directly in terms of the derivative of the orthogonal polynomial instead of relating them to Gauss weights. The range of computation is extended.
-
 # MATLAB algorithms
 
 ## 1. Gauss--Jacobi quadratures
