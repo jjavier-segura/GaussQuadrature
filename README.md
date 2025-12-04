@@ -98,7 +98,7 @@ unscaled)
 ## 3. Gauss--Hermite quadrature
 
 **Common Inputs:**\
-- `n` (degree)\
+- `n` (degree)
 - `expoc` (cutoff)
 
 ### 3.1. `GHa` and `GHi`
@@ -130,11 +130,11 @@ Direct computation of barycentric weights.
 # MAPLE algorithms
 
 1.  **Gauss--Gegenbauer quadrature:**
-    -   `gegenbauer.mpl` (Maple algorithm)\
+    -   `gegenbauer.mpl` (Maple algorithm)
     -   `gegenbauer.mws` (usage worksheet)
 2.  **Gauss--Hermite quadrature:**
-    -   `hermite.mpl`\
-    -   `hermite.mws` (algorithm + worksheet)
+    -   `hermite.mpl` (Maple algorithm)
+    -   `hermite.mws` (usage worksheet)
 
 
  
