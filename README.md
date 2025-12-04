@@ -11,7 +11,7 @@ The algorithms are described in the paper "Fast and accurate computation of clas
 
 # MATLAB algorithms
 
-## 1. Gauss--Jacobi quadratures
+## 1. Gauss-Jacobi quadratures
 
 ### 1.1. `GJ`
 
@@ -42,7 +42,7 @@ Computation of Gauss--Jacobi quadrature (uses `legen`).
 function [x,w] = legen(n)
 ```
 
-Fast computation of Gauss--Legendre quadrature.
+Fast computation of Gauss-Legendre quadrature.
 
 **Input:**
 - `n` (degree)
@@ -59,20 +59,20 @@ Fast computation of Gauss--Legendre quadrature.
 function [x,w,wb] = rlJ(n,a,b,e)
 ```
 
-Gauss--Radau--Jacobi and Gauss--Lobatto--Jacobi quadratures and
+Gauss-Radau-Jacobi and Gauss-Lobatto-Jacobi quadratures and
 barycentric weights (uses `GJ`).
 
 **Inputs:** 
 - `n` (degree)
 - `a`, `b` (parameters of the quadrature)
-- `e = [c d]`: -`c = 1`: include `x = -1` as node (Gauss-Radau or Gauss-Lobatto), `c = 0`: otherwise
--              -`d = 1`: include `x = 1` as node (Gauss-Radau or Gauss-Lobatto), `d = 0`: otherwise
+- `e = [c d]`: `c = 1`, include `x = -1` as node (Gauss-Radau or Gauss-Lobatto); `c = 0`: otherwise
+               `d = 1`, include `x = 1` as node (Gauss-Radau or Gauss-Lobatto); `d = 0`: otherwise
 
 **Outputs:** - `x` (nodes) - `w` (weights) - `wb` (barycentric weights)
 
 ------------------------------------------------------------------------
 
-## 2. Gauss--Laguerre quadratures
+## 2. Gauss-Laguerre quadratures
 
 ### 2.1. `GL`
 
@@ -80,7 +80,7 @@ barycentric weights (uses `GJ`).
 [x,w,we,indi,ie] = GL(n,a,expoc,es,me)
 ```
 
-Computation of Gauss--Laguerre quadrature (uses `bessJY`).
+Computation of Gauss-Laguerre quadrature (uses `bessJY`).
 
 **Inputs:** - `n` (degree) - `a` (parameter) - `expoc` (exponential
 cutoff) - `es` (extra scaling) - `me` (optional, default `0`)
@@ -96,7 +96,7 @@ cutoff) - `es` (extra scaling) - `me` (optional, default `0`)
 function [x,w,wb] = rL(n,a,b,expoc)
 ```
 
-Gauss--Radau--Laguerre quadrature and barycentric weights (uses `GL`).
+Gauss-Radau-Laguerre quadrature and barycentric weights (uses `GL`).
 
 **Inputs:** - `n` (degree) - `a` (parameter) - `b` (Gauss or Lobatto
 option) - `expoc` (cutoff)
@@ -106,7 +106,7 @@ unscaled)
 
 ------------------------------------------------------------------------
 
-## 3. Gauss--Hermite quadrature
+## 3. Gauss-Hermite quadrature
 
 **Common Inputs:**
 - `n` (degree)
@@ -140,10 +140,10 @@ Direct computation of barycentric weights.
 
 # MAPLE algorithms
 
-1.  **Gauss--Gegenbauer quadrature:**
+1.  **Gauss-Gegenbauer quadrature:**
     -   `gegenbauer.mpl` (Maple algorithm)
     -   `gegenbauer.mws` (usage worksheet)
-2.  **Gauss--Hermite quadrature:**
+2.  **Gauss-Hermite quadrature:**
     -   `hermite.mpl` (Maple algorithm)
     -   `hermite.mws` (usage worksheet)
 
