@@ -4,10 +4,17 @@ function [x,w,wb]=rL(n,a,b,expoc,es)
 %        n: degree
 %        a: alpha
 %        b: b=0 for standard Gauss and b=1 for Lobatto
+%           (default b=0)
+%
+% OPTIONAL INPUTS: expoc, es (as in GL.m) 
+%
 % Output:
 %         x: nodes
 %         w: Gaussian weights
-%        wb: barycentric weights (unnormalized)   
+%        wb: barycentric weights (unnormalized)  
+if nargin<5
+    es=0;
+end    
 if nargin<4
   expoc=1.e3;
 end    
