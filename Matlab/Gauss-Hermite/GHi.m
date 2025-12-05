@@ -111,4 +111,4 @@ wns=w.*exp(-xc(i).^2);
 xc=[-xc(end:-1:1+ind) xc];
 wns=[wns(end:-1:1+ind) wns];
 w=[w(end:-1:1+ind) w];
-uv=-cumprod(-ones(1,n)).*sqrt(wns);
+uv=-cumprod(-ones(1,length(xc))).*sqrt(wns);

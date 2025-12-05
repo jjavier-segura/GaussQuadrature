@@ -46,7 +46,7 @@ ind=n-2*floor(n/2);
 xz=[-xz(end:-1:1+ind) xz];
 wns=[wns(end:-1:1+ind) wns];
 w=[w(end:-1:1+ind) w];
-uv=-cumprod(-ones(1,n)).*sqrt(wns);
+uv=-cumprod(-ones(1,length(xz))).*sqrt(wns);
 end
 function [xc,wns,ws]=hermweightnodesElem(n)
 %--------------------------------------------------------
