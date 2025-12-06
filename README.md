@@ -30,7 +30,7 @@ Computation of Gauss-Jacobi quadrature (uses `legen`).
 - `a`, `b` (parameters of the quadrature) 
 - `me` (mode of computation, default `0`): `0` combined method
                                            `1` iterative method
-                                           `2` Golub-Welsh
+                                           `2` Golub-Welsch algorithm
                                            `3` asymptotic method (n not too small)
 
 **Outputs:**  
@@ -173,10 +173,10 @@ Direct computation of barycentric weights.
 
 1.  **Gauss-Gegenbauer quadrature:**
     -   `gegenbauer.mpl` (Maple algorithm)
-    -   `gegenbauer.mws` (usage worksheet)
+    -   `gegenbauer.mws` (worksheet with examples)
 2.  **Gauss-Hermite quadrature:**
     -   `hermite.mpl` (Maple algorithm)
-    -   `hermite.mws` (usage worksheet)
+    -   `hermite.mws` (worksheet with examples)
 
 
  
