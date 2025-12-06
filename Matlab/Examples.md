@@ -253,7 +253,7 @@ expoc = 100; % Cut-off
 disp('Number of nodes (or corresponding weights) calculated')
 length(x)  % Display the number of nodes (or corresponding weights) calculated
 disp('Minimum of the weights / Maximum of the weights')
-min(w) / max(w)  % Display the minimum and maximum weight
+min(w) / max(w)  % Display the ratio of the minimum to maximum weight
 disp('Weight number 100, w(100)')
 w(100)  % Display weight number 100
 disp('Scaled weight number 100, ws(100)')
