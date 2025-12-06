@@ -1,5 +1,9 @@
 function [x,w,wb]=rL(n,a,b,expoc,es)
 % Gauss-Laguerre and Lobatto-Laguerre nodes and weights
+% Copyright 2025 A. Gil, J. Segura, N. M. Temme
+%
+% [x,w,wb]=rL(n,a,b,expoc,es)
+%
 % Input: 
 %        n: degree
 %        a: alpha
@@ -12,6 +16,7 @@ function [x,w,wb]=rL(n,a,b,expoc,es)
 %         x: nodes
 %         w: Gaussian weights
 %        wb: barycentric weights (unnormalized)  
+%
 if nargin<5
     es=0;
 end    

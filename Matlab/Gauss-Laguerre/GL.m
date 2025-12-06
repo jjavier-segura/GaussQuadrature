@@ -1,11 +1,13 @@
 function [x,w,we,indi,ie]=GL(n,a,expoc,es,me)
 % Gauss-Laguerre quadrature
 % Copyright 2025 A. Gil, J. Segura, N. M. Temme
+%
+% [x,w,we,indi,ie]=GL(n,a,expoc,es,me)
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % WARNING: The default working mode of the algorithm (es=0) corresponds to
 % the weight function w(x)=x^a exp(-x)/gamma(a+1). For the more standard 
 % weight function w(x)=x^a exp(-x) choose es=1 as input (see below).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % INPUTS:
 %--------------------
@@ -58,7 +60,7 @@ if me<1
 % COMBINED METHOD    
    if n<5
       [x,w]=LGW(n,a);
-      we=[];
+      we=w;
       indi=0;
       % Golub-Welsch
    elseif ((n<=275)&&(a>(3*n-4140)/3900))||((n>275)&&(n<=400)&&(a>1.5))||((n>400)&&(n<=800)&&(a>3.5))||((n>800)&&(a>5))
@@ -73,7 +75,7 @@ elseif me==1
    %Iterative-only method
 elseif me==2    
    [x,w]=LGW(n,a);
-   we=[];
+   we=w;
    indi=0;
    %Golub-Welsch (me=2) 
 else
