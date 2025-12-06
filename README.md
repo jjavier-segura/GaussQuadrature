@@ -23,7 +23,7 @@ The algorithms are described in the paper _Fast and accurate computation of clas
 function [x,w,ie] = GJ(n,a,b,me)
 ```
 
-Computation of Gauss--Jacobi quadrature (uses `legen`).
+Computation of Gauss-Jacobi quadrature (uses `legen`).
 
 **Inputs:** 
 - `n` (degree)
@@ -88,16 +88,16 @@ barycentric weights (uses `GJ`).
 [x,w,we,indi,ie] = GL(n,a,expoc,es,me)
 ```
 
-Computation of Gauss-Laguerre quadrature (uses `bessJY`).
+Computation of Gauss-Laguerre quadrature.
 
 **Inputs:** 
 - `n` (degree)
 - `a` (parameter of the quadrature)
 - `expoc` (exponential cutoff. The algorithm computes only those weights w such that, approximately, w/max(w)<10^(-expoc))
-- `me` (optional, default `0`): `0` combined method
-                                `1` iterative method
-                                `2` Golub-Welsh
-                                `3` asymptotic method (n>150)
+- `me` (method of computation, default `0`): `0` combined method
+                                             `1` iterative method
+                                             `2` Golub-Welsch algorithm
+                                             `3` asymptotic method (for n>150)
 - `es` (extra scaling): `0` the weights w are the Gauss-Laguerre weights divided by gamma(a+1)
                         `1` standard Gauss-Laguerre weights
 
