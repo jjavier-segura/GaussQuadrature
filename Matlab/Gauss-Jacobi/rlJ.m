@@ -1,4 +1,9 @@
 function [x,w,wb]=rlJ(n,a,b,e)
+% Gauss-Radau-Jacobi and Gauss-Lobatto quadratures and barycentric weights
+% Copyright 2025 A. Gil, J. Segura, N. M. Temme
+%
+% [x,w,wb]=rlJ(n,a,b,e)
+%
 %x: nodes, w: gauss weights, wb: barycentric weights
 %n: degre, a: alpha, b: beta
 %e=[c d]

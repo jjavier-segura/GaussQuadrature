@@ -1,14 +1,19 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function [x,w]=legen(n)
+% Gauss-Legendre quadrature
+% Copyright 2025 A. Gil, J. Segura, N. M. Temme
+%
+% [x,w]=legen(n)
+%
 % FAST Gauss-Legendre quadrature
 % Asymptotic formulas for Gauss-Legendre (n>80)
 % and look-up table for n<=80
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% n: degree
-% x: nodes
-% w: weights
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function [x,w]=legen(n)
+%
+% INPUT:
+%    n: degree
+% OUTPUTS:
+%    x: nodes
+%    w: weights
+%
 if n>80
  flo=floor(n/2);
  ind=n-2*flo;

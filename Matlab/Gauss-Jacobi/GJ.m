@@ -1,26 +1,26 @@
 function [x,w,ie]=GJ(n,a,b,me)
 % Gauss-Jacobi quadrature
 % Copyright 2025 A. Gil, J. Segura, N. M. Temme
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% [x,w,ie]=GJ(n,a,b,me)
+%
 % INPUT:
-%%%%%%%%
-%n: degree
-%a: alpha
-%b: beta
-%me: mode of computation
-%     me=0 (or third input omitted): combined method
-%     me=1:                          only iterative
-%     me=2:                          only GW
-%     me=3:                          only asymptotics (n not too small)
+%   n: degree
+%   a: alpha
+%   b: beta
+%   me: mode of computation
+%       me=0 (or third input omitted): combined method
+%       me=1:                          only iterative
+%       me=2:                          only GW
+%       me=3:                          only asymptotics (n not too small)
 %--------------------------------------------------------------------
 % OUTPUT
-%%%%%%%%
 %x: nodes
 %w: weights
 %ie: error flag. If ie=0 computation succesfull
 %                   ie=1 computation failed
 %                   ie=2 some weights are too small and are set to zero
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 x=[];w=[];
 ie=0;
 if nargin<4
