@@ -1,10 +1,17 @@
 function [xc,w]=bH(n,expoc)
-%------------------------------------------------------------
-%Iterative algorithm.
-%Double precision Hermite nodes and barycentric weights
-%WITH CUTOFF
-%n-->degree; xc-->nodes; w-->barycentric weights 
+% Hermite nodes and barycentric weights. Iterative method.
+% Copyright 2025 A. Gil, J. Segura, N. M. Temme
 %
+% [x,v]=bH(n,expoc)
+%
+% INPUT:
+%   n: degree 
+%   expoc (optional): cut off (only weights such that v/vmax<10^(-expoc) are computed)
+%
+% OUTPUT:
+%   x: nodes
+%   v: barycentric weights
+%------------------------------------------------------------
 % This algorithm computes barycentric weights directly in
 % terms of the derivative of the OP instead of relating them
 % to Gauss weights. The range of computation is extended.

@@ -1,12 +1,19 @@
 function [xc,wns,w,uv]=GHi(n,expoc)
-%-----------------------------------------------------------------------
-%Iterative algorithm.
-%Double precision Hermite nodes and weights
-% n-->degree 
-% expoc: cut off (only weights such that w/wmax<10^(-expoc) are computed
-% xc-->nodes;  wns-->unscaled weights; 
-% w-->scaled weights; uv-->barycentric weights
-%-----------------------------------------------------------------------
+% Gauss-Hermite quadrature. Iterative method.
+% Copyright 2025 A. Gil, J. Segura, N. M. Temme
+%
+% [x,w,ws,v]=GHi(n,expoc)
+%
+% INPUT:
+%   n: degree 
+%   expoc (optional): cut off (only weights such that w/wmax<10^(-expoc) are computed)
+%
+% OUTPUT:
+%   x: nodes
+%   w: unscaled weights 
+%   ws: scaled weights
+%   v: barycentric weights
+%
 if nargin<2 
     expoc=1.e300;
 end
